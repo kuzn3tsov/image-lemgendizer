@@ -569,6 +569,66 @@ function App() {
   // Get template categories for display
   const templateCategories = getTemplateCategories()
 
+  // Function to format template names for display
+  const formatTemplateName = (name) => {
+    const nameMap = {
+      // Logo
+      'LogoRectangular': 'Rectangular',
+      'LogoSquare': 'Square',
+
+      // Web
+      'WebHero': 'Hero',
+      'WebBlog': 'Blog Featured',
+      'WebContent': 'Content',
+      'WebThumb': 'Thumbnail',
+
+      // Instagram
+      'InstagramProfile': 'Profile',
+      'InstagramSquare': 'Square',
+      'InstagramPortrait': 'Portrait',
+      'InstagramLandscape': 'Landscape',
+      'InstagramStoriesReels': 'Stories & Reels',
+
+      // Facebook
+      'FacebookProfile': 'Profile',
+      'FacebookCoverBanner': 'Cover',
+      'FacebookSharedImage': 'Shared',
+      'FacebookSquarePost': 'Square',
+      'FacebookStories': 'Stories',
+
+      // Twitter/X
+      'XProfile': 'Profile',
+      'XHeaderBanner': 'Header',
+      'XLandscapePost': 'Landscape',
+      'XSquarePost': 'Square',
+      'XPortraitPost': 'Portrait',
+
+      // LinkedIn
+      'LinkedInProfile': 'Profile',
+      'LinkedInPersonalCover': 'Cover',
+      'LinkedInLandscapePost': 'Landscape',
+      'LinkedInSquarePost': 'Square',
+      'LinkedInPortraitPost': 'Portrait',
+
+      // YouTube
+      'YouTubeChannelIcon': 'Channel Icon',
+      'YouTubeBanner': 'Banner',
+      'YouTubeThumbnail': 'Thumbnail',
+
+      // Pinterest
+      'PinterestProfile': 'Profile',
+      'PinterestStandardPin': 'Standard',
+      'PinterestSquarePin': 'Square',
+      'PinterestStoryPin': 'Story',
+
+      // TikTok
+      'TikTokProfile': 'Profile',
+      'TikTokVideoCover': 'Video Cover'
+    };
+
+    return nameMap[name] || name;
+  }
+
   return (
     <div className="app">
       {/* Loading Overlay */}
@@ -859,7 +919,7 @@ function App() {
                                   <span className="template-info">
                                     <i className={`${template.icon} template-icon`}></i>
                                     <span className="template-details">
-                                      <span className="template-name">{template.name}</span>
+                                      <span className="template-name">{formatTemplateName(template.name)}</span>
                                       <span className="template-meta">
                                         <span className="template-dimensions">
                                           <i className="fas fa-expand-alt"></i>

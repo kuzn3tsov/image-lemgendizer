@@ -2,6 +2,10 @@
 
 A modern web application for batch image processing and optimization. Process images for web and social media templates directly in your browser.
 
+## ToDo
+[] split functionalities
+[] create npm package
+
 ## Features
 - **Batch Processing**: Upload and process multiple images at once
 - **Smart Templates**: Pre-defined templates for all social media platforms
