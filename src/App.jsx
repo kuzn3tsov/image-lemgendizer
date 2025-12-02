@@ -798,9 +798,6 @@ function App() {
                         <h3>
                           <i className="fas fa-th-large"></i> Template Selection
                         </h3>
-                        <p className="template-selection-subtitle">
-                          {processingOptions.selectedTemplates.length} templates selected
-                        </p>
                       </div>
                       <div className="controls-row">
                         <button
@@ -831,9 +828,6 @@ function App() {
                             <div className="template-category-header">
                               <h3 className="template-category-title">
                                 <i className={`${category.icon} category-icon`}></i> {category.name}
-                                <span className="template-count" style={{ marginLeft: '10px', fontSize: '0.8rem' }}>
-                                  {categoryTemplates.length}
-                                </span>
                               </h3>
                               <div className="template-category-controls">
                                 <button
@@ -841,14 +835,14 @@ function App() {
                                   onClick={() => handleSelectAllInCategory(category.id)}
                                   disabled={!processingOptions.templateSelectedImage}
                                 >
-                                  <i className="fas fa-check"></i> Select All
+                                  <i className="fas fa-check"></i> All
                                 </button>
                                 <button
                                   className="btn btn-secondary btn-small"
                                   onClick={() => handleDeselectAllInCategory(category.id)}
                                   disabled={!processingOptions.templateSelectedImage}
                                 >
-                                  <i className="fas fa-times"></i> Deselect All
+                                  <i className="fas fa-times"></i> None
                                 </button>
                               </div>
                             </div>
@@ -869,10 +863,18 @@ function App() {
                                       <span className="template-meta">
                                         <span className="template-dimensions">
                                           <i className="fas fa-expand-alt"></i>
-                                          {template.width}×{template.height === 'auto' ? 'auto' : template.height}px
+                                          {template.width}×{template.height === 'auto' ? 'auto' : template.height}
                                         </span>
                                         <span className="template-platform">
-                                          <i className="fas fa-globe"></i>
+                                          {category.id === 'instagram' && <i className="fab fa-instagram platform-instagram"></i>}
+                                          {category.id === 'facebook' && <i className="fab fa-facebook platform-facebook"></i>}
+                                          {category.id === 'twitter' && <i className="fab fa-twitter platform-twitter"></i>}
+                                          {category.id === 'linkedin' && <i className="fab fa-linkedin platform-linkedin"></i>}
+                                          {category.id === 'youtube' && <i className="fab fa-youtube platform-youtube"></i>}
+                                          {category.id === 'pinterest' && <i className="fab fa-pinterest platform-pinterest"></i>}
+                                          {category.id === 'tiktok' && <i className="fab fa-tiktok platform-tiktok"></i>}
+                                          {category.id === 'web' && <i className="fas fa-globe platform-web"></i>}
+                                          {category.id === 'logo' && <i className="fas fa-copyright platform-logo"></i>}
                                           {template.platform}
                                         </span>
                                       </span>
