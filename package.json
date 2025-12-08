@@ -3,10 +3,10 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://kuzn3tsov.github.io/image-lemgendizer",
+  "homepage": "https://kuzn3tsov.github.io/image-lemgendizer-old",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kuzn3tsov/image-lemgendizer"
+    "url": "https://github.com/kuzn3tsov/image-lemgendizer-old"
   },
   "keywords": [
     "image",

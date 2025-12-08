@@ -13,8 +13,8 @@ import { getTemplateCategories, SOCIAL_MEDIA_TEMPLATES, getTemplatesByCategory }
 import './styles/App.css'
 
 // Import logos (assuming they're in src/assets/)
-import lemGendaIcon from './assets/lemgenda-icon.svg'
-import lemGendaLogo from './assets/lemgenda-logo.svg'
+import lemGendaIcon from '../src/assets/lemgenda-icon.svg'
+import lemGendaLogo from '../src/assets/lemgenda-logo.svg'
 
 function App() {
   const [images, setImages] = useState([])
